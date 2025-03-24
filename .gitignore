@@ -117,6 +117,7 @@ env.bak/
 venv.bak/
 log.html
 *.html
+*.png
 output.xml
 playwright-log.txt
 report.html
