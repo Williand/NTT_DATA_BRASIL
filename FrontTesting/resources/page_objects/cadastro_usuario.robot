@@ -1,21 +1,15 @@
 *** Settings ***
 Resource    ../resources.robot
+Resource    ../locators/login_page_locators.robot
+Resource    ../locators/cadastro_usuario_page_locators.robot
 Library  SeleniumLibrary
 
-
 *** Variables ***
-${URL}                https://front.serverest.dev/login
 ${BROWSER}            chrome
-${BTN_CADASTRE_SE}    //*[@id="root"]/div/div/form/small/a
-${INPUT_NOME}         //*[@id="nome"]
-${INPUT_EMAIL}        //input[@data-testid="email"]
-${INPUT_SENHA}        //*[@id="password"]
-${BTN_CADASTRAR}      xpath=//button[text()='Cadastrar']
-${MSG_SUCESSO}        //*[@id="root"]/div/div/form/div[1]/div/a
 
 *** Keywords ***
 Dado que estou na pagina de login
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL_LOGIN}    ${BROWSER}
     Maximize Browser Window
     Wait Until Element Is Visible    ${INPUT_EMAIL}    timeout=5s
 E clico no botão "Cadastre-se"
