@@ -3,10 +3,8 @@ Resource            ../resources/resources.robot
 Resource            ../resources/page_objects/login.robot
 Resource            ../resources/page_objects/cadastro_usuario.robot
 Resource            ../resources/page_objects/home.robot
-# Test Setup          Abrir navegador
-# Test Teardown       Fechar navegador
 
-*** Test Case ***
+*** Test Cases ***
 Cenário 01: Cadastrar novo usuário
     Dado que estou na pagina de login
     E clico no botão "Cadastre-se"
